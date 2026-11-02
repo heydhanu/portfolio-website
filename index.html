@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Dhanushini, a Network Computing student at UNIMAS. Network design, security tools and web projects.">
+  <meta name="theme-color" content="#0b5c6b">
+  <title>Dhanushini | Network Computing Portfolio</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <div id="progress" aria-hidden="true"></div>
+
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="#home" class="logo">Dhanushini</a>
+      <button id="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <p class="role">Network Computing student, UNIMAS</p>
+        <h1 id="hero-title">Dhanushini</h1>
+        <p class="intro">I configure enterprise networks and build small tools that monitor and secure them.</p>
+        <a href="#projects" class="btn">View projects</a>
+        <a href="#contact" class="btn btn-outline">Contact me</a>
+      </div>
+      <figure class="term" aria-label="Terminal window with a short introduction">
+        <div class="term-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+        <pre><code><span class="prompt">$</span> whoami
+dhanushini
+<span class="prompt">$</span> cat focus.txt
+<span id="typed" data-text="networking, security, web development">networking, security, web development</span><span class="caret" aria-hidden="true"></span></code></pre>
+      </figure>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <div class="filters" role="group" aria-label="Filter projects by topic">
+        <button type="button" class="filter active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter" data-filter="networking" aria-pressed="false">Networking</button>
+        <button type="button" class="filter" data-filter="security" aria-pressed="false">Security</button>
+        <button type="button" class="filter" data-filter="web" aria-pressed="false">Web</button>
+      </div>
+      <p id="filter-status" class="sr-only" role="status"></p>
+
+      <div class="project-list">
+        <article class="project" data-category="networking security">
+          <button type="button" class="shot" data-full="nexora-network.png" aria-label="Enlarge screenshot of the Nexora Enterprise Network">
+            <img src="nexora-network.png" alt="Cisco Packet Tracer topology of the Nexora enterprise network with seven VLANs" width="640" height="400" loading="lazy">
+          </button>
+          <div class="project-body">
+            <h3>Nexora Enterprise Network</h3>
+            <p class="meta">Individual project, August to November 2026</p>
+            <p>A simulated enterprise network in Cisco Packet Tracer 9.0 with 7 VLANs, 802.1Q trunking and router-on-a-stick routing. It includes DHCP, DNS, an internal web server, NAT/PAT, LACP EtherChannel, ACLs between departments and an isolated guest network.</p>
+            <ul class="tags"><li>Cisco Packet Tracer</li><li>VLANs</li><li>ACLs</li><li>NAT/PAT</li></ul>
+            <a href="https://github.com/heydhanu/nexora-enterprise-network" target="_blank" rel="noopener">View Nexora on GitHub (opens in new tab)</a>
+          </div>
+        </article>
+
+        <article class="project" data-category="networking">
+          <button type="button" class="shot" data-full="server-health-monitor.png" aria-label="Enlarge screenshot of the Server Health Monitor">
+            <img src="server-health-monitor.png" alt="Server Health Monitor chart of CPU, memory and disk usage over time" width="640" height="400" loading="lazy">
+          </button>
+          <div class="project-body">
+            <h3>Server Health Monitor</h3>
+            <p class="meta">Individual project, November 2026</p>
+            <p>A Python tool that samples CPU, memory and disk usage every 2 seconds and logs each sample to CSV. It raises alerts when configurable thresholds are crossed and plots usage trends with matplotlib.</p>
+            <ul class="tags"><li>Python</li><li>psutil</li><li>matplotlib</li></ul>
+            <a href="https://github.com/heydhanu/server-health-monitor" target="_blank" rel="noopener">View Server Health Monitor on GitHub (opens in new tab)</a>
+          </div>
+        </article>
+
+        <article class="project" data-category="security">
+          <button type="button" class="shot" data-full="log-anomaly-detector.png" aria-label="Enlarge screenshot of the Log Anomaly Detector">
+            <img src="log-anomaly-detector.png" alt="Log Anomaly Detector plot with suspicious login events flagged" width="640" height="400" loading="lazy">
+          </button>
+          <div class="project-body">
+            <h3>Log Anomaly Detector</h3>
+            <p class="meta">Individual project, November 2026</p>
+            <p>A Python tool that flags suspicious activity in about 2,000 simulated log entries. It combines a rule (more than 5 failed logins per minute) with an Isolation Forest model, and was tested against injected brute-force and data-transfer spikes.</p>
+            <ul class="tags"><li>Python</li><li>scikit-learn</li><li>Isolation Forest</li></ul>
+            <a href="https://github.com/heydhanu/log-anomaly-detector" target="_blank" rel="noopener">View Log Anomaly Detector on GitHub (opens in new tab)</a>
+          </div>
+        </article>
+
+        <article class="project" data-category="security web">
+          <button type="button" class="shot" data-full="credential-verifier.png" aria-label="Enlarge screenshot of the Credential Verifier">
+            <img src="credential-verifier.png" alt="Credential Verifier page showing a credential marked VALID" width="640" height="400" loading="lazy">
+          </button>
+          <div class="project-body">
+            <h3>Credential Verifier</h3>
+            <p class="meta">Individual project, November 2026</p>
+            <p>A Flask web app that issues digital credentials and detects tampering with SHA-256 hash chaining, where each record stores the previous record's hash. A QR-code link opens a verify page that returns VALID or TAMPERED.</p>
+            <ul class="tags"><li>Flask</li><li>SHA-256</li><li>QR codes</li></ul>
+            <a href="https://github.com/heydhanu/credential-verifier" target="_blank" rel="noopener">View Credential Verifier on GitHub (opens in new tab)</a>
+          </div>
+        </article>
+
+        <article class="project" data-category="web">
+          <button type="button" class="shot" data-full="ev-dashboard.png" aria-label="Enlarge screenshot of the KESTRA EV Dashboard">
+            <img src="ev-dashboard.png" alt="KESTRA EV dashboard home screen with battery, navigation and climate panels" width="640" height="400" loading="lazy">
+          </button>
+          <div class="project-body">
+            <h3>KESTRA EV Dashboard</h3>
+            <p class="meta">Group project (team of 9), March to May 2026. Role: front-end developer</p>
+            <p>An interactive in-car infotainment prototype with six screens. I built the climate screen with temperature, fan and AC controls, added destination search with a live trip countdown, and styled the dashboard layout.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <a href="https://heydhanu.github.io/kestra-ev-dashboard/" target="_blank" rel="noopener">View live KESTRA prototype (opens in new tab)</a>
+            <a href="https://github.com/heydhanu/kestra-ev-dashboard" target="_blank" rel="noopener">View KESTRA on GitHub (opens in new tab)</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="alt" aria-labelledby="about-title">
+      <div class="inner">
+        <h2 id="about-title">About Me</h2>
+        <p class="lead">I'm a third-year Network Computing student at UNIMAS. I like understanding how traffic moves through a network and how to protect it, and I build websites and small tools to practise what I learn.</p>
+        <p>This year I designed a segmented enterprise network, wrote Python tools for monitoring and anomaly detection, and built the climate screen of a team EV dashboard. Next, I want to go deeper into web development and network security.</p>
+        <dl class="skills">
+          <div><dt>Networking</dt><dd>VLANs, inter-VLAN routing, DHCP, DNS, NAT, ACLs</dd></div>
+          <div><dt>Programming</dt><dd>Python, HTML, CSS, JavaScript</dd></div>
+          <div><dt>Tools</dt><dd>Cisco Packet Tracer, Flask, scikit-learn, Git and GitHub</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>Email: <a href="mailto:103867@siswa.unimas.my" id="email-link">103867@siswa.unimas.my</a> <button id="copy-btn" type="button">Copy email</button></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/dhanushini-balan-360863341" target="_blank" rel="noopener">linkedin.com/in/dhanushini-balan-360863341 (opens in new tab)</a></p>
+      <p>GitHub: <a href="https://github.com/heydhanu" target="_blank" rel="noopener">github.com/heydhanu (opens in new tab)</a></p>
+
+      <form id="form" novalidate>
+        <h3>Send a message</h3>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" aria-describedby="name-err" required>
+        <p class="err" id="name-err"></p>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-err" required>
+        <p class="err" id="email-err"></p>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" maxlength="500" aria-describedby="message-err count" required></textarea>
+        <p class="count" id="count">0 / 500</p>
+        <p class="err" id="message-err"></p>
+
+        <button type="submit" class="btn">Send message</button>
+        <p id="status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>&copy; <span id="year">2026</span> Dhanushini. Built with HTML, CSS and JavaScript.</footer>
+  <button id="top-btn" type="button" aria-label="Back to top">Top</button>
+
+  <dialog id="lightbox" aria-label="Project screenshot">
+    <button type="button" id="lightbox-close" aria-label="Close screenshot">Close</button>
+    <img id="lightbox-img" src="" alt="">
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
